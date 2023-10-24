@@ -27,7 +27,7 @@ public:
     std::string toString() const; // Convert to string
 
 
-    // Operator overload declarations//
+    // Operator overload declarations///
 
 
    // Overload the addition operator (+) to add two Angle objects.
