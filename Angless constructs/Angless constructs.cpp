@@ -64,3 +64,32 @@ std::string Angle::toString() const {
     ss << degrees << " degrees " << minutes << " minutes";
     return ss.str();
 }
+
+
+
+
+Angle Angle::operator+(const Angle& other) const {
+    double newDegrees = degrees + other.degrees;
+    double newMinutes = minutes + other.minutes;
+    return Angle(newDegrees, newMinutes);
+}
+
+Angle Angle::operator-(const Angle& other) const {
+    double newDegrees = degrees - other.degrees;
+    double newMinutes = minutes - other.minutes;
+    return Angle(newDegrees, newMinutes);
+}
+
+bool Angle::operator==(const Angle& other) const {
+    return (degrees == other.degrees) && (minutes == other.minutes);
+}
+
+bool Angle::operator<(const Angle& other) const {
+    return (degrees < other.degrees) ||
+        ((degrees == other.degrees) && (minutes < other.minutes));
+}
+
+std::ostream& operator<<(std::ostream& os, const Angle& angle) {
+    os << angle.degrees << " degrees " << angle.minutes << " minutes";
+    return os;
+}
