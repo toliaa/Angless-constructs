@@ -25,7 +25,7 @@ This program defines a C++ class called `Angle` to represent angles. The class p
 2. Compile the `definitions.cpp` file to create an executable.
 3. Run the executable.
 4. Follow the on-screen prompts to input angles and perform various operations.
-   ## License
+## License
 
 This project is licensed under the MIT License
 
